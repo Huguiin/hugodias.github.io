@@ -1,0 +1,244 @@
+/* Paleta de cores atualizada */
+:root {
+  --off-white: #f2efe7;
+  --light-blue: #9acbd0;
+  --medium-blue: #48a6a7;
+  --dark-blue: #006a71;
+  --text-dark: #222; /* cor de texto escura para contraste */
+}
+
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  font-weight: 400;
+  background-color: var(--dark-blue);
+  color: var(--text-dark);
+}
+
+/* Header */
+.Cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-blue);
+  padding: 24px 48px;
+  color: var(--off-white);
+  box-shadow: 0 2px 8px rgba(0, 106, 113, 0.08);
+}
+
+.Logo-nome {
+  font-family: "Meow Script", cursive;
+  font-size: 2.2rem;
+  color: var(--off-white);
+  margin: 0;
+}
+
+.Menu-lista {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.Menu-lista-item-opcao {
+  text-decoration: none;
+  color: var(--off-white);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.Menu-lista-item-opcao:hover,
+.Menu-lista-item-opcao:focus {
+  background-color: var(--medium-blue);
+  color: var(--off-white);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .Cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 12px;
+  }
+  .Cabecalho nav ul {
+    gap: 16px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Cabecalho nav ul li a {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Main content */
+main {
+  background: linear-gradient(180deg, var(--light-blue) 30%, var(--off-white) 100%);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.Apresentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  /*background-color: var(--light-blue);*/
+
+  color: var(--text-dark);
+}
+
+.Apresentacao-nome {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--dark-blue);
+}
+
+.Apresentacao-subtitulo {
+  font-size: 2rem;
+  margin: 16px 0;
+  color: var(--medium-blue);
+}
+
+.Apresentacao-texto {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  max-width: 600px;
+  text-align: center;
+  margin: 0;
+  padding: 2vh;
+}
+
+.Apresentacao-botao {
+  background-color: var(--medium-blue);
+  color: var(--off-white);
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.Apresentacao-botao:hover,
+.Apresentacao-botao:focus {
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+}
+
+.Sobre {
+  background-color: var(--off-white);
+  color: var(--dark-blue);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 106, 113, 0.07);
+  padding: 40px 24px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.Sobre-titulo {
+  font-size: 2.2rem;
+  color: var(--dark-blue);
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+}
+
+.Sobre-box {
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 6px rgba(72, 166, 167, 0.08);
+}
+
+.Sobre-subtitulo {
+  font-size: 1.3rem;
+  color: var(--medium-blue);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.Sobre-texto {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  .Sobre {
+    padding: 20px 6px;
+  }
+  .Sobre-box {
+    padding: 16px 8px;
+  }
+}
+
+/* Habilidades - mesmo padrão do Sobre */
+.Habilidades {
+  background-color: var(--off-white);
+  color: var(--dark-blue);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 106, 113, 0.07);
+  padding: 40px 24px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.Habilidades-titulo {
+  font-size: 2.2rem;
+  color: var(--dark-blue);
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  font-weight: 700;
+}
+
+.Habilidades-box {
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 6px rgba(72, 166, 167, 0.08);
+}
+
+.Habilidades-subtitulo {
+  font-size: 1.3rem;
+  color: var(--medium-blue);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.Habilidades-lista {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+  padding-left: 18px;
+}
+
+.Habilidades-lista li {
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  footer {
+    padding: 14px 0;
+    font-size: 1rem;
+  }
+}
